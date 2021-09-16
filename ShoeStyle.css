@@ -2,11 +2,13 @@
   font-family: sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .Whole-Product {
   border: 4px solid black;
   position: relative;
+  margin-top: 80px;
 }
 
 .Whole-Product::after {
@@ -33,7 +35,7 @@
   border: black solid 1px;
 }
 
-#Product-Title {
+.Product-Title {
   text-align: center;
   background-color: #e9e9e9;
   text-transform: uppercase;
@@ -49,11 +51,17 @@ h2 {
   font-size: small;
   color: #575757;
   text-transform: uppercase;
+  margin-top: 8px;
 }
 
 #Price {
   font-size: 25px;
   font-weight: bold;
+}
+
+.Details {
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 button:enabled {
@@ -67,9 +75,9 @@ button:enabled {
 
 button:active,
 button:hover {
-  border: none;
   background-color: white;
   color: black;
+  cursor: pointer;
 }
 
 a:link,
@@ -93,7 +101,7 @@ ol {
 }
 
 article {
-  width: 800px;
+  width: 825px;
   margin-left: auto;
   margin-right: auto;
   margin: 10px auto;
@@ -101,4 +109,38 @@ article {
 
 p {
   margin-bottom: 10px;
+}
+
+/*.Product-Body {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.Purchase-Details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.First-Section {
+  flex: 1;
+}
+
+.Second-Section {
+  flex: 1;
+}*/
+
+.Whole-Product {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.Product-Title {
+  grid-column: 1 / -1;
+}
+
+button {
+  grid-column: 1/-1;
 }
